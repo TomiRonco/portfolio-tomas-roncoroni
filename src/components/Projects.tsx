@@ -2,15 +2,14 @@
 
 import { motion } from 'framer-motion'
 import { ExternalLink, Github, Play } from 'lucide-react'
-import Image from 'next/image'
 
 export default function Projects() {
   const projects = [
     {
       title: 'Community AR',
-      description: 'Agencia de Community Management y Marketing Digital ubicada en Alcorta, Santa Fe. Plataforma web completa para servicios de gestión de redes sociales, desarrollo web y marketing digital con más de 40 clientes satisfechos.',
+      description: 'Plataforma comunitaria desarrollada con tecnologías modernas. Una aplicación web que conecta personas y facilita la interacción en comunidades locales.',
       image: '/api/placeholder/600/400',
-      technologies: ['Next.js', 'React', 'Tailwind CSS', 'JavaScript', 'Responsive Design', 'SEO'],
+      technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Vercel'],
       liveUrl: 'https://community-ar.vercel.app/',
       githubUrl: 'https://github.com/TomiRonco',
       featured: true
@@ -61,7 +60,7 @@ export default function Projects() {
             Mis <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Proyectos</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Proyectos reales desarrollados para clientes
+            Proyectos reales desarrollados para clientes y comunidades
           </p>
         </motion.div>
 
@@ -70,16 +69,14 @@ export default function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 gap-8"
         >
           {projects.map((project, index) => (
             <motion.div
               key={index}
               variants={projectVariants}
               whileHover={{ y: -5 }}
-              className={`bg-gray-900 rounded-lg shadow-lg overflow-hidden border border-gray-700 ${
-                project.featured ? 'md:col-span-2 lg:col-span-1' : ''
-              }`}
+              className="bg-gray-900 rounded-lg shadow-lg overflow-hidden border border-gray-700"
             >
               {/* Project Image */}
               <div className="relative h-48 bg-gradient-to-br from-blue-900 to-purple-900 overflow-hidden group">
@@ -171,31 +168,29 @@ export default function Projects() {
           ))}
         </motion.div>
 
-        {/* CTA Section */}
+        {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
-              ¿Interesado en ver más proyectos?
+              ¿Tienes un proyecto en mente?
             </h3>
             <p className="text-gray-300 mb-6">
-              Tengo muchos más proyectos en mi repositorio de GitHub. ¡Échales un vistazo!
+              Estoy disponible para nuevos proyectos y colaboraciones. ¡Hablemos!
             </p>
             <motion.a
-              href="https://github.com/TomiRonco"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
             >
-              <Github className="h-5 w-5" />
-              <span>Ver en GitHub</span>
+              <span>Contactar</span>
+              <ExternalLink className="h-4 w-4" />
             </motion.a>
           </div>
         </motion.div>
