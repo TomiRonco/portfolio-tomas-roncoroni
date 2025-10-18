@@ -7,6 +7,15 @@ import Image from 'next/image'
 export default function Projects() {
   const projects = [
     {
+      title: 'Community AR',
+      description: 'Agencia de Community Management y Marketing Digital ubicada en Alcorta, Santa Fe. Plataforma web completa para servicios de gestión de redes sociales, desarrollo web y marketing digital con más de 40 clientes satisfechos.',
+      image: '/api/placeholder/600/400',
+      technologies: ['Next.js', 'React', 'Tailwind CSS', 'JavaScript', 'Responsive Design', 'SEO'],
+      liveUrl: 'https://community-ar.vercel.app/',
+      githubUrl: 'https://github.com/TomiRonco',
+      featured: true
+    },
+    {
       title: 'Club Los Leones Norte',
       description: 'Sitio web institucional para el Club Los Leones Norte. Plataforma moderna y responsiva que presenta la información del club, actividades, eventos y servicios para la comunidad.',
       image: '/api/placeholder/600/400',
@@ -49,10 +58,10 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Mi <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Proyecto</span>
+            Mis <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Proyectos</span>
           </h2>
-          <p className="text-xl text-gray-600 text-gray-300 max-w-3xl mx-auto">
-            Proyecto real desarrollado para un cliente
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Proyectos reales desarrollados para clientes
           </p>
         </motion.div>
 
@@ -73,10 +82,10 @@ export default function Projects() {
               }`}
             >
               {/* Project Image */}
-              <div className="relative h-48 bg-gradient-to-br from-blue-900 to-purple-900 from-blue-900 to-purple-900 overflow-hidden group">
+              <div className="relative h-48 bg-gradient-to-br from-blue-900 to-purple-900 overflow-hidden group">
                 {/* Placeholder for project image */}
                 <div className="w-full h-full flex items-center justify-center">
-                  <Play className="h-12 w-12 text-gray-400 text-gray-600" />
+                  <Play className="h-12 w-12 text-gray-600" />
                 </div>
                 
                 {/* Overlay with links */}
@@ -117,7 +126,7 @@ export default function Projects() {
                   )}
                 </div>
                 
-                <p className="text-gray-600 text-gray-300 mb-4 leading-relaxed">
+                <p className="text-gray-300 mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
@@ -152,7 +161,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="px-4 py-2 border-2 border-gray-600 text-gray-300 rounded-lg hover:border-blue-600 hover:text-blue-600 dark:hover:border-blue-400 hover:text-blue-400 transition-all duration-300"
+                    className="px-4 py-2 border-2 border-gray-600 text-gray-300 rounded-lg hover:border-blue-600 hover:text-blue-400 transition-all duration-300"
                   >
                     <Github className="h-4 w-4" />
                   </motion.a>
@@ -170,7 +179,7 @@ export default function Projects() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 from-blue-900/20 to-purple-900/20 rounded-lg p-8">
+          <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               ¿Interesado en ver más proyectos?
             </h3>
@@ -183,7 +192,7 @@ export default function Projects() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 hover:bg-gray-800 transition-colors"
+              className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
             >
               <Github className="h-5 w-5" />
               <span>Ver en GitHub</span>
